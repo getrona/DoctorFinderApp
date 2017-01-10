@@ -1,7 +1,11 @@
 var Doctor = require('./../js/doctor.js').doctorModule;
 
 var displayDoctor = function(input, doctorInfo) {
-  $('.showDoctor').text(doctorInfo);
+  doctorInfo.forEach(function(x){
+    $('.showDoctor').append(x.profile.bio + "<br>");
+
+  });
+
 };
 
 $(document).ready(function() {
